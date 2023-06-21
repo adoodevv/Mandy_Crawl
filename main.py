@@ -20,7 +20,7 @@ def find_jobs():
             more_info = job.header.h2.a['href']
 
             if unfamiliar_skill not in skills:
-                with open('posts/{index}.txt', 'w') as f:
+                with open(f'posts/{index}.txt', 'w') as f:
                     f.write(f'Company Name: {company_name.strip()} \n')
                     f.write(f'Skills Required: {skills.strip()} \n')
                     f.write(f'More Information: {more_info}')
@@ -30,5 +30,5 @@ if __name__ == '__main__':
     while True:
         find_jobs()
         time_wait = 10
-        print(f'Waiting {time_wait} minutes')
+        print(f'Waiting {time_wait} minutes...')
         time.sleep(60 * time_wait)
