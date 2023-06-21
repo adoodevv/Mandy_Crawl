@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import time
 
 print('Put an unfamiliar skill')
 unfamiliar_skill = input('>')
@@ -22,3 +23,10 @@ def find_jobs():
                 print(f'Company Name: {company_name.strip()}')
                 print(f'Skills Required: {skills.strip()}')
                 print(f'More Information: {more_info}')
+
+if __name__ == '__main__':
+    while True:
+        find_jobs()
+        time_wait = 10
+        print(f'Waiting {time_wait} minutes')
+        time.sleep(60 * time_wait)
